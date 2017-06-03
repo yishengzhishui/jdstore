@@ -163,7 +163,7 @@
 }
 
 // // 按钮区域样式
-
+//----加入购物车的按钮------
 .btn:hover{
   opacity:0.5;
   color:#fff;
@@ -175,11 +175,7 @@
 .btn{
   height:40px;
 }
-//
-// // 收藏按钮
-// .product-collection {
-//
-// }
+
 //点赞
 .product-zan {
   a:hover{
@@ -187,7 +183,7 @@
   }
 }
 
-//直接购买、购物车、收藏、点赞人气按钮（陈慧娟）Start
+//直接购买、收藏、点赞人气按钮（陈慧娟）Start
 
 .action {
   margin-top:30px;
@@ -214,12 +210,6 @@
     color: #fff;
     margin-bottom:10px;
   }
-  // a.add-to-cart{
-  //   border-color:rgb(245,190,126);
-  //   color:#fff;
-  //   color:rgb(245,190,126);
-  //   font-size: 40px;
-  // }
   a.like{
     border-color:rgb(245,190,126);
     background-color:rgb(245,190,126);
