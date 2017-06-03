@@ -129,6 +129,33 @@
 
 //----推荐商品区域------
 
+//-----图片向上滑动------
+
+.productindex-box {
+  width: 300px;
+  padding-left: 15px;
+  margin: 10px;
+  margin-left: 10px;
+  margin-right:10px ;
+  background: #fff;
+  position: relative;
+  top: 0;
+  transition: all 0.4s; /*这句代码的意思是，当这个元素的某个属性发现变化时，不是立刻完成，而是慢慢地在400ms内完成，这样就实现了动画的效果*/
+  -webkit-transition:all 0.4s ease-in-out; /*让「谷歌浏览器」支持这个属性*/
+  -moz-transition:all 0.4s ease-in-out; /*让「火狐浏览器」支持这个属性*/
+  -o-transition:all 0.4s ease-in-out; /*让「safari」支持属性*/
+  -ms-transition:all 0.4s ease-in-out; /*让「IE浏览器」支持这个属性*/
+}
+
+.productindex-box img {
+  width: 100%;
+}
+
+.productindex-box:hover {
+  top: -5px; /*在400ms内，top的值从 0px 变化为 5px*/
+}
+
+
 #hot-products{
   background-color: #ECEFF1;
   // margin: 0 auto;
