@@ -152,7 +152,9 @@
 //商品库存样式
 .product-quantity {
   float: left;
-  margin: 1.5em auto;
+  margin-top:30px;
+  margin-bottom: 0px;
+ font-size: 15px;
 }
 
 .buy-quantity {
@@ -183,8 +185,8 @@ a.btn:hover{
 }
 
 a.btn{
-height:40px;
-font-size: 18px;
+height:55px;
+font-size: 28px;
 }
 
 .action {
@@ -197,19 +199,26 @@ font-size: 18px;
     padding-left:10px;padding-right:0px;
   }
   a.buy{
-    background-color:rgb(245,190,126);color: #fff;margin-bottom:10px;
+    background-color:rgb(245,190,126);
+    color: #fff;
+    margin-bottom:10px;
   }
   a.add-to-cart{
-    border-color:rgb(245,190,126);background-color:#fff;color:rgb(245,190,126);
+    border-color:rgb(245,190,126);
+    color:#fff;
+    color:rgb(245,190,126);
+    font-size: 20px;
   }
   a.like{
-    border-color:rgb(245,190,126);background-color:rgb(245,190,126);
+    border-color:rgb(245,190,126);
+    background-color:rgb(245,190,126);
     i{
       color:#fff;
     }
   }
   a.unlike{
-    border-color:rgb(245,190,126);background-color:#fff;
+    border-color:rgb(245,190,126);
+    background-color:#fff;
     i{
       color:rgb(245,190,126);
     }
