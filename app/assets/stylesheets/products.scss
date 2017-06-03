@@ -151,24 +151,78 @@
 
 //商品库存样式
 .product-quantity {
+  float: left;
   margin: 1.5em auto;
 }
 
-// 按钮区域样式
-.add-to-cart-buttom {
-  margin: 3em auto 1em;
+.buy-quantity {
+  float: left;
+  margin: 1.5em auto;
 }
 
-// 收藏按钮
-.product-collection {
+// // 按钮区域样式
+// .add-to-cart-buttom {
+//   margin: 4em auto 1em;
+// }
+//
+// // 收藏按钮
+// .product-collection {
+//
+// }
+// //点赞
+// .product-zan {
+//   a:hover{
+//     text-decoration: none;
+//   }
+// }
 
+//直接购买、购物车、收藏、点赞人气按钮（陈慧娟）Start
+a.btn:hover{
+  opacity:0.5;
+  color:#fff;
 }
-//点赞
-.product-zan {
-  a:hover{
-    text-decoration: none;
+
+a.btn{
+height:40px;
+font-size: 18px;
+}
+
+.action {
+  margin-top:30px;
+  padding-left:0;padding-right:0px;
+  .col-md-10{
+    padding-left:0;padding-right:0px;
+  }
+  .col-md-2{
+    padding-left:10px;padding-right:0px;
+  }
+  a.buy{
+    background-color:rgb(245,190,126);color: #fff;margin-bottom:10px;
+  }
+  a.add-to-cart{
+    border-color:rgb(245,190,126);background-color:#fff;color:rgb(245,190,126);
+  }
+  a.like{
+    border-color:rgb(245,190,126);background-color:rgb(245,190,126);
+    i{
+      color:#fff;
+    }
+  }
+  a.unlike{
+    border-color:rgb(245,190,126);background-color:#fff;
+    i{
+      color:rgb(245,190,126);
+    }
   }
 }
+
+.favor{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+}
+//直接购买、购物车、收藏、点赞人气按钮（陈慧娟）End
+
 // 数量输入框
 .quantity-input {
   color: #333;
