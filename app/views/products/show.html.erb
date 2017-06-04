@@ -109,7 +109,7 @@
       <!-- <div class="cnotainer"> -->
         <div class="">
          <!-- 加入购物车按钮 -->
-          <div class="col-md-10 ">
+          <div class="cart col-md-10 ">
             <button type="submit" class=" add-to-cart_btn  btn btn-block " >
               <% if @product.quantity.present? && @product.quantity > 0 %>
               <i class="fa fa-shopping-cart"  style="font-size: 20px;"> 加入购物车</i>
@@ -149,9 +149,9 @@
 
 
     <!-- 商品详情区域 + 推荐展示 -->
-    <div class="container">
+    <div class="details">
       <!-- 商品详情区域 + 商品评论区域 -->
-      <div class="col-md-9 product-particulars">
+      <div class="col-md-8  product-particulars">
         <!-- 导航栏 -->
         <div class="row">
           <ul class="nav nav-tabs nav-justified">  <!--nav-justified整个画面详情和评论各占一半-->
@@ -170,26 +170,7 @@
             <% @product.photos.each do |p| %>
               <%= image_tag p.image.main.url  , class: "thumbnail img-responsive col-md-6" %>
             <% end %>
-            <div class="faq">
-               <p class="faq-title">鲜花订购常见问题 FAQ</p>
-               <p class="question">1.我订鲜花多久能送到？</p>
-               <p class="answer">
-                 在您订购付款后，鲜花最快3个小时左右就能送到接收人手上。<br>
-                 您下单时可自由选择配送日期，我们已全国连锁，由当地的加盟店当天制作配送，以确保新鲜。</p>
-               <p class="question">2.我要送鲜花, 需要提前多久订购？</p>
-               <p class="answer">
-                 鲜花一般提前半天订购就可以送到； 当然，您提前一个月、两个月、半年，或提前更长时间订购都是可以的，我们都会在您指定的日期为您配送，总之，您越早订购越好，方便我们提前安排。 <br>
-                 [注：个别商品因为是稀缺花材或有特别的制作工艺，需要提前订购，而需要提前的时间请查看商品详情中的说明]
-               </p>
-               <p class="question">3.我怎么样付款？</p>
-               <p class="answer">可以通过微信、支付宝进行付款。</p>
-               <p class="question">4.是先付款再配送吗？先付款怎么保证我的东西能按要求送到？</p>
-               <p class="answer">是的，我们是国内领先的鲜花速递服务商，有着良好的市场口碑的和广泛的行业影响，必将用心服务，不负您的信赖。</p>
-               <p class="question">5.送到的鲜花会和图片上的一样吗？</p>
-               <p class="answer">
-                 花艺师都是按图片和文字的要求来制作花束，主花材的枝数和颜色完全一致。<br>
-                花束效果因花艺师手法不同可能略有小的区别</p>
-             </div>
+
           </div>
           <!-- 商品评论区域 --><!--对商品评论以及评星-->
           <div class="product-particulars-box row tab-pane" id="tab_default_2">
@@ -208,20 +189,19 @@
                 <ul>
                   <li>
                     <div class="row">
-                      <div class="col-xs-9 review-user-email"><%= review.user.email %></div>
+                      <div class="col-xs-8 review-user-email"><%= review.user.email %></div>
                       <div class="col-xs-3"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
+                      <div class="col-xs-1">
+                        <% if review.user == current_user %>
+                          <%= link_to product_review_path(@product, review), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash"></i><% end %>
+                        <% end %>
+                      </div>
                     </div>
                     <div class="review-comment">
                       新鲜： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
                       外观： <div class="star-look" data-score= <%= review.look %> ></div>
                       价格： <div class="star-price" data-score= <%= review.price %> ></div>
                       <%= review.body %>
-                    </div>
-
-                    <div>
-                      <% if review.user == current_user %>
-                         <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
-                      <% end %>
                     </div>
                   </li>
                 </ul>
@@ -232,9 +212,33 @@
               <% end %>
           </div>
         </div>
+        <div class="c">
+
+
+        <div class=" faq">
+           <p class="faq-title">鲜花订购常见问题 FAQ</p>
+           <p class="question">1.我订鲜花多久能送到？</p>
+           <p class="answer">
+             在您订购付款后，鲜花最快3个小时左右就能送到接收人手上。<br>
+             您下单时可自由选择配送日期，我们已全国连锁，由当地的加盟店当天制作配送，以确保新鲜。</p>
+           <p class="question">2.我要送鲜花, 需要提前多久订购？</p>
+           <p class="answer">
+             鲜花一般提前半天订购就可以送到； 当然，您提前一个月、两个月、半年，或提前更长时间订购都是可以的，我们都会在您指定的日期为您配送，总之，您越早订购越好，方便我们提前安排。 <br>
+             [注：个别商品因为是稀缺花材或有特别的制作工艺，需要提前订购，而需要提前的时间请查看商品详情中的说明]
+           </p>
+           <p class="question">3.我怎么样付款？</p>
+           <p class="answer">可以通过微信、支付宝进行付款。</p>
+           <p class="question">4.是先付款再配送吗？先付款怎么保证我的东西能按要求送到？</p>
+           <p class="answer">是的，我们是国内领先的鲜花速递服务商，有着良好的市场口碑的和广泛的行业影响，必将用心服务，不负您的信赖。</p>
+           <p class="question">5.送到的鲜花会和图片上的一样吗？</p>
+           <p class="answer">
+             花艺师都是按图片和文字的要求来制作花束，主花材的枝数和颜色完全一致。<br>
+            花束效果因花艺师手法不同可能略有小的区别</p>
+         </div>
+         </div>
       </div>
     <!-- 推荐区 -->
-        <div class="col-md-3 proposal-product">
+        <div class="col-md-3 col-md-offset-1 proposal-product">
         <h4 style="padding-top:10px;">为您推荐的宝贝</h4>
         <hr />
         <div >
