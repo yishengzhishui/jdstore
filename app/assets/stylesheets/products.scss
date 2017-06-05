@@ -11,51 +11,73 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
 .col-item {
   background: #FFF;
+
+  .options {
+    position:absolute;
+    top:6px;
+    right:22px;
+  }
+  .photo {
+    overflow: hidden;
+  }
+  .photo .options {
+    display:none;
+  }
+  .options-cart {
+    position:absolute;
+    left:22px;
+    top:6px;
+    display:none;
+  }
+  .photo:hover .options,
+  .photo:hover .options-cart {
+    display:block;
+    -webkit-animation: fadeIn .5s ease;
+    -moz-animation: fadeIn .5s ease;
+    -ms-animation: fadeIn .5s ease;
+    -o-animation: fadeIn .5s ease;
+    animation: fadeIn .5s ease;
+  }
+  .price-details {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .price-details h1 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    float:left;
+    color: rgb(245,190,126);
+  }
+  .price-details span {
+    float:right;
+  }
+  .price-details .price-new {
+    font-size:16px;
+    color: rgb(245,190,126);
+  }
+  .imageindex:hover {
+    opacity:0.5;
+    color:#fff;
+  }
+  .fa {
+    color: #7f8c8d;  //index页面图标的颜色
+    font-size: 25px;
+    text-decoration: none;
+
+  }
+  .btn {
+    border-color: #fff;
+    background-color: rgb(245,190,126);
+  }
+  .like{
+    color:#fff;
+  }
+  .unlike{
+    color:rgb(245,190,126);
+  }
 }
-.col-item .options {
-  position:absolute;
-  top:6px;
-  right:22px;
-}
-.col-item .photo {
-  overflow: hidden;
-}
-.col-item .photo .options {
-  display:none;
-}
-.col-item .options-cart {
-  position:absolute;
-  left:22px;
-  top:6px;
-  display:none;
-}
-.col-item .photo:hover .options,
-.col-item .photo:hover .options-cart {
-  display:block;
-  -webkit-animation: fadeIn .5s ease;
-  -moz-animation: fadeIn .5s ease;
-  -ms-animation: fadeIn .5s ease;
-  -o-animation: fadeIn .5s ease;
-  animation: fadeIn .5s ease;
-}
-.col-item .price-details {
-  width: 100%;
-  margin-top: 5px;
-}
-.col-item .price-details h1 {
-  font-size: 18px;
-  line-height: 20px;
-  margin: 0;
-  float:left;
-  color: rgb(245,190,126);
-}
-.col-item .price-details span {
-  float:right;
-}
-.col-item .price-details .price-new {
-  font-size:16px;
-  color: rgb(245,190,126);
-}
+
 
 
 
