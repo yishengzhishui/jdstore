@@ -46,7 +46,7 @@
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #3E2723; //鼠标放置在链接上的文字颜色
-    background-color: transparent; //鼠标防止在链接上的背景颜色，这里设置为透明
+    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设置为透明
 
 }
 
@@ -180,22 +180,6 @@ section h2 {
 }
 
 
-//---------Footer---------
-
-footer {
-    color: #233140;
-}
-
-footer .footer-below {
-    padding: 25px 0;
-    background-color: #ECEFF1;
-}
-
-//--------footer-bottom------
-
-html { height: 100%;}
-  body { min-height: 100%; display: flex; flex-direction: column;}
-  .content { flex: 1;}
   //---------Footer---------
 
 footer {
@@ -203,8 +187,8 @@ footer {
 }
 
 footer .footer-below {
-    padding: 25px 0;
-    background-color: #ECEFF1;
+    padding: 15px 0;
+    background-color: #d7d7d8;
 }
 
 //--------footer-bottom------
@@ -217,12 +201,12 @@ html { height: 100%;}
   display: block;
   // background: #F2F2F2;
   height: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   width: 100%;
-  border-bottom: 1px solid #CCCCCC;
+  // border-bottom: 1px solid #CCCCCC;
   // border-top: 1px solid #DDDDDD;
   background-position: center 80%;
-  margin: 50px 0 10px 0;
+  margin: 30px 0 10px 0;
   position: relative;
   vertical-align: bottom;
 }
@@ -254,6 +238,22 @@ html { height: 100%;}
   color: #666;
 }
 
+.footer p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer .word {
+  margin-top: 25px;
+}
+.footer-brand > img{
+     display: inline-block; //图片和链接文字显示在同一行
+     margin-bottom: 5px;
+     margin-right: 10px; //图片和链接文字拉开一点距离
+     width: 32px; //定制图片宽度
+     height: 32px; //定制图片高度
+     line-height: 32px;
+}
+
 //---------回到顶部-------------
 #gotop {
   width: 50px;
@@ -261,12 +261,13 @@ html { height: 100%;}
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: #fff;
+  border-radius: 50%;
+  background: #F25F5C;
   cursor: pointer;
   display: none; /*默认先隐藏掉*/
 }
 .fa-arrow-up {
-  color: #F25F5C;
+  color: #fff;
   // margin-left: 10px;
   line-height: 50px;
 }

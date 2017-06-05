@@ -26,11 +26,11 @@
                 <!-- 收藏 -->
                 <% if current_user && current_user.is_member_of?(product) %>
                   <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="delete from wish list">
-                    <%= link_to("" ,quit_product_path(product), method: :post, class: "  fa unlike fa-heart")%>
+                    <%= link_to("" ,quit_product_path(product), method: :post, class: "  fa like fa-heart")%>
                   </button>
                 <% else %>
                   <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                    <%= link_to("", join_product_path(product), method: :post, class: " fa like fa-heart")%>
+                    <%= link_to("", join_product_path(product), method: :post, class: " fa unlike fa-heart")%>
                   </button>
                 <% end %>
                 <!-- 点赞 -->

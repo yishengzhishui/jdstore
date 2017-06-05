@@ -135,14 +135,44 @@
       </div>
 
       <!--  点赞 人气-->
-      <div class="col-md-12">
+      <hr>
+
+      <div class="col-xs-12">
         <hr>
+      <div class="col-xs-4">
       <%= link_to like_product_path(@product), method: :put do %>
         <div class="product-zan">
-          <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+          <i class="fa fa-thumbs-up fa-2x" , style="color:#E71D36;"></i>
           <a>人气（<%= @product.get_upvotes.size %>）</a>
         </div>
       <% end %>
+      </div>
+
+
+      <div class="col-xs-6 col-xs-offset-2">
+        <div class="share">
+          <li>
+            <a href="javascript:void(0)" class="btn btn-round btn-weixin" target=_new>
+              <i class="fa fa-weixin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="btn  btn-round btn-weibo" target=_new>
+              <i class="fa fa-weibo" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" class="btn btn-round btn-facebook" target=_new>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" class="btn btn-round btn-linkedin" target=_new>
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        </div>
+      </div>
       </div>
       </div>
     </div>
@@ -189,8 +219,8 @@
                 <ul>
                   <li>
                     <div class="row">
-                      <div class="col-xs-8 review-user-email"><%= review.user.email %></div>
-                      <div class="col-xs-3"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
+                      <div class="col-xs-7 review-user-email"><%= review.user.email %></div>
+                      <div class="col-xs-4"><%= review.created_at.strftime("%Y-%m-%d %H-%M-%S") %></div>
                       <div class="col-xs-1">
                         <% if review.user == current_user %>
                           <%= link_to product_review_path(@product, review), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash"></i><% end %>
@@ -212,11 +242,10 @@
               <% end %>
           </div>
         </div>
-        <div class="c">
 
 
         <div class=" faq">
-           <p class="faq-title">鲜花订购常见问题 FAQ</p>
+           <h3 class="faq-title text-center">鲜花订购常见问题 FAQ</h3>
            <p class="question">1.我订鲜花多久能送到？</p>
            <p class="answer">
              在您订购付款后，鲜花最快3个小时左右就能送到接收人手上。<br>
@@ -234,7 +263,6 @@
            <p class="answer">
              花艺师都是按图片和文字的要求来制作花束，主花材的枝数和颜色完全一致。<br>
             花束效果因花艺师手法不同可能略有小的区别</p>
-         </div>
          </div>
       </div>
     <!-- 推荐区 -->
