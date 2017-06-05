@@ -13,15 +13,24 @@
         <div class="col-sm-3 product-box panel panel-default" style=" padding:0px">
           <article class="col-item">
         		<div class="photo">
-        			<div class="options">
+              <div class="imageindex">
+                <%= link_to product_path(product) do %>
+                  <% if product.photos.present? %>
+                    <%= image_tag(product.photos[0].image.main.url, class: "thumbnail", class: " img-responsive center-block") %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail", class: " img-responsive center-block") %>
+                  <% end %>
+                <% end %>
+              </div>
+        			<div class=" options">
                 <!-- 收藏 -->
                 <% if current_user && current_user.is_member_of?(product) %>
                   <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="delete from wish list">
-                    <%= link_to("" ,quit_product_path(product), method: :post, class: " fa fa-heart")%>
+                    <%= link_to("" ,quit_product_path(product), method: :post, class: "  fa like fa-heart")%>
                   </button>
                 <% else %>
                   <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                    <%= link_to("", join_product_path(product), method: :post, class: " fa fa-heart")%>
+                    <%= link_to("", join_product_path(product), method: :post, class: " fa unlike fa-heart")%>
                   </button>
                 <% end %>
                 <!-- 点赞 -->
@@ -35,7 +44,7 @@
         				</button>
               </div>
 
-        			<div class="options-cart">
+        			<div class=" options-cart">
         				<button class="btn btn-default" title="Add to cart">
                   <% if product.quantity.present? && product.quantity > 0 %>
                     <%= link_to("", add_to_cart_product_path(product), method: :post, class: "fa fa-shopping-cart") %>
@@ -44,13 +53,7 @@
                   <% end %>
         				</button>
         			</div>
-              <%= link_to product_path(product) do %>
-                <% if product.photos.present? %>
-                  <%= image_tag(product.photos[0].image.main.url, class: "thumbnail", class: " img-responsive center-block") %>
-                <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail", class: " img-responsive center-block") %>
-                <% end %>
-              <% end %>
+
             </div>
         		<div class="panel-footer">
         			<div class="row">

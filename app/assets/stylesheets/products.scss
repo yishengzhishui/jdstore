@@ -11,51 +11,73 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
 .col-item {
   background: #FFF;
+
+  .options {
+    position:absolute;
+    top:6px;
+    right:22px;
+  }
+  .photo {
+    overflow: hidden;
+  }
+  .photo .options {
+    display:none;
+  }
+  .options-cart {
+    position:absolute;
+    left:22px;
+    top:6px;
+    display:none;
+  }
+  .photo:hover .options,
+  .photo:hover .options-cart {
+    display:block;
+    -webkit-animation: fadeIn .5s ease;
+    -moz-animation: fadeIn .5s ease;
+    -ms-animation: fadeIn .5s ease;
+    -o-animation: fadeIn .5s ease;
+    animation: fadeIn .5s ease;
+  }
+  .price-details {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .price-details h1 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    float:left;
+    color:  #F16B6F;
+  }
+  .price-details span {
+    float:right;
+  }
+  .price-details .price-new {
+    font-size:16px;
+    color: #D81159;
+  }
+  .imageindex:hover {
+    opacity:0.5;
+    color:#fff;
+  }
+  .fa {
+    color: #E71D36;  //index页面图标的颜色
+    font-size: 25px;
+    text-decoration: none;
+
+  }
+  .btn {
+    border-color: #D9D4CF;
+    background-color: #F8FAFF;
+  }
+  .like{
+    color:#E71D36;
+  }
+  .unlike{
+    color:#a3a1a1;
+  }
 }
-.col-item .options {
-  position:absolute;
-  top:6px;
-  right:22px;
-}
-.col-item .photo {
-  overflow: hidden;
-}
-.col-item .photo .options {
-  display:none;
-}
-.col-item .options-cart {
-  position:absolute;
-  left:22px;
-  top:6px;
-  display:none;
-}
-.col-item .photo:hover .options,
-.col-item .photo:hover .options-cart {
-  display:block;
-  -webkit-animation: fadeIn .5s ease;
-  -moz-animation: fadeIn .5s ease;
-  -ms-animation: fadeIn .5s ease;
-  -o-animation: fadeIn .5s ease;
-  animation: fadeIn .5s ease;
-}
-.col-item .price-details {
-  width: 100%;
-  margin-top: 5px;
-}
-.col-item .price-details h1 {
-  font-size: 18px;
-  line-height: 20px;
-  margin: 0;
-  float:left;
-  color: rgb(245,190,126);
-}
-.col-item .price-details span {
-  float:right;
-}
-.col-item .price-details .price-new {
-  font-size:16px;
-  color: rgb(245,190,126);
-}
+
 
 
 
@@ -95,6 +117,7 @@
 
 // 商品标题样式
 .product-title {
+  margin-left: 40px;
   color: #7f8c8d;
 }
 
@@ -171,7 +194,7 @@
   }
   .add-to-cart_btn {
     background-color:rgb(245,190,126);
-    color: #e3e3e3;
+    color: #fff;
   }
   .btn{
     height:40px;
@@ -185,7 +208,49 @@
   }
 }
 
-//直接购买、收藏、点赞人气按钮（陈慧娟）Start
+.share li {
+  display: inline;
+  font-size: 18px;
+  list-style-type: none; //链接 前面的点去掉
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+
+  .btn {
+    color: #fff;
+    font-size: 15px;
+  }
+  .btn-round {
+    border-radius: 50%;
+  }
+  .btn-weixin {
+    background-color: #3ac569;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .btn-weibo {
+    background-color: #CD201F;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    }
+
+  .btn-facebook {
+    background-color: #3b5998;
+  }
+
+  .btn-linkedin {
+    background-color: #0976b4;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+//直接购买、收藏（陈慧娟）Start
 
 .action {
   margin-top:30px;
@@ -208,30 +273,24 @@
   }
 
   a.buy{
-    background-color:rgb(245,190,126);
+    background-color: #ed1c24;
     color: #fff;
     margin-bottom:10px;
   }
   a.like{
-    border-color:rgb(245,190,126);
-    background-color:rgb(245,190,126);
+    border-color:#a3a1a1;
+    background-color:#fff;
     i{
-      color:#fff;
+      color:#a3a1a1;
     }
   }
   a.unlike{
-    border-color:rgb(245,190,126);
+    border-color:#a3a1a1;
     background-color:#fff;
     i{
-      color:rgb(245,190,126);
+      color:#E71D36;
     }
   }
-}
-
-.favor{
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #666;
 }
 //直接购买、购物车、收藏、点赞人气按钮（陈慧娟）End
 
@@ -302,14 +361,16 @@
 .faq-title{
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #666;
-    font-size: 15px;
+    color: #08182b;
+    font-weight: 500;
+    font-size: 20px;
   }
 .question{
-    color:#666;
+    color:#08182b;
+    font-weight: 300;
   }
 .answer{
-    color: #999;
+    color: #311e3e;
     margin-bottom: 30px;
   }
 
