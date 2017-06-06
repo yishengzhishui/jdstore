@@ -48,6 +48,7 @@ gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
 gem 'china_city'
+gem 'rqrcode'
 group :development, :test do
   gem 'awesome_rails_console'
   gem 'pry'

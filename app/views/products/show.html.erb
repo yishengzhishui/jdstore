@@ -152,7 +152,7 @@
       <div class="col-xs-6 col-xs-offset-2">
         <div class="share">
           <li>
-            <a href="javascript:void(0)" class="btn btn-round btn-weixin" target=_new>
+            <a onclick="on()" class="btn btn-round btn-weixin" target=_new>
               <i class="fa fa-weixin" aria-hidden="true"></i>
             </a>
           </li>
@@ -348,6 +348,12 @@
   </div>
 </div>
 
+<div id="overlay" onclick="off()">
+  <div id="text" class= "image">手机扫一扫，分享给好友~
+    <%= raw @qr.as_html  %>
+  </div>
+</div>
+
 
 <script>
   $('.star-freshness').raty({
@@ -390,5 +396,13 @@
   $('#star-freshness img').eq(0).trigger('click')
   $('#star-look img').eq(0).trigger('click')
   $('#star-price img').eq(0).trigger('click')
+
+  //----微信扫一扫-------
+  function on() {
+      document.getElementById("overlay").style.height = "100%";
+  }
+  function off() {
+      document.getElementById("overlay").style.height = "0";
+  }
 
 </script>

@@ -20,6 +20,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @reviews = @product.reviews
+    @qr = RQRCode::QRCode.new(product_url(@product).to_s, :size => 6, :level => :h )
+
     if @reviews.blank?
         @avg_review = 0
         @avg_look = 0
