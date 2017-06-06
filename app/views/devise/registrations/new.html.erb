@@ -45,7 +45,7 @@
           <div class="cols-sm-10">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-              <%= f.password_field :password, required: true, autocomplete: "off", minlength: 8, class: "form-control", placeholder: "输入密码（至少八位）" %>
+              <%= f.password_field :password, required: true, autocomplete: "off", class: "form-control", placeholder: "输入密码（至少6位）" %>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
           <div class="cols-sm-10">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-              <%= f.password_field :password_confirmation,required: true ,autocomplete: "off", minlength: 8, class: "form-control", placeholder: "再次确认"%>
+              <%= f.password_field :password_confirmation,required: true ,autocomplete: "off",  class: "form-control", placeholder: "再次确认"%>
             </div>
           </div>
         </div>
