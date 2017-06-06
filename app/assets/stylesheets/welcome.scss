@@ -38,6 +38,7 @@
     z-index: 3;                                       //元素堆叠等级3，将显示在最上层
     color: #fff;
     text-align: center;
+    font-family: 'Passion One', cursive;
     text-transform: uppercase;                        //英文大写
     text-shadow: 0 0 5px #666;            //文字阴影 和 动态显示时间
       -webkit-transform: translate3d(-50%,-50%,0);
@@ -47,14 +48,15 @@
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {                                            //h1标题设置
-    font-size: 4em;
+    font-size: 70px;
     font-weight: 500;
     margin: 10px;
     padding: 0;
 }
 
-.hero h3 {                                            //h1标题设置
+.hero h3 {                                            //h3标题设置
     letter-spacing: 0.1em;
+    font-size: 30px;
 }
 
 .fade-carousel .carousel-inner .item .hero {          //动态出现设置
