@@ -206,7 +206,7 @@ html { height: 100%;}
   // border-bottom: 1px solid #CCCCCC;
   // border-top: 1px solid #DDDDDD;
   background-position: center 80%;
-  margin: 30px 0 10px 0;
+  margin: 0px;
   position: relative;
   vertical-align: bottom;
 }
@@ -239,8 +239,9 @@ html { height: 100%;}
 }
 
 .footer p {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
+  font-family: 'Passion One', cursive;
 }
 .footer .word {
   margin-top: 25px;
@@ -270,4 +271,84 @@ html { height: 100%;}
   color: #fff;
   // margin-left: 10px;
   line-height: 50px;
+}
+
+//----注册/登录页面--------
+
+
+.main{
+ 	margin-top: -20px;
+  height: 700px;
+  background-size: cover;                             //确保图片完全撑开
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signback {
+  background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbqiyiim5j31kw0yeahl.jpg);
+}
+
+.loginback {
+  background-image: url(https://ws1.sinaimg.cn/large/006tNc79gy1fgbqje917oj31kw11xjxf.jpg);
+}
+
+.cartindex {
+  background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbqj9x6zbj31kw11xtie.jpg);
+  padding-top: 50px;
+}
+
+.userback {
+  background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbx7kbwqij30zk0npjsp.jpg);
+  height: 100%;
+}
+
+h1.title {
+  margin-top: 80px;
+	font-size: 50px;
+	font-family: 'Passion One', cursive;
+	font-weight: 400;
+}
+
+
+hr{
+	width: 100%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 330px;
+  padding: 40px 40px;
+
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 14px;
+	text-align: center;
+  margin-top: 15px;
 }
