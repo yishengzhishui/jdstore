@@ -36,6 +36,10 @@ end
     process resize_to_fill: [40,40]
   end
 
+  version :thumb3 do
+    process resize_to_fill: [100,100]
+  end
+
   version :thumb2 do
     process resize_to_fill: [30,30]
   end
