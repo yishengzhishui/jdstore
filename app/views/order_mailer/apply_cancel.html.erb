@@ -59,12 +59,12 @@
           <td>
             <li>姓名：<%= @order.billing_name %></li>
             <li>地址：
-            <%= ChinaCity.get(@order.billing_province) %>
-            <%= ChinaCity.get(@order.billing_city) %>
-            <%= ChinaCity.get(@order.billing_district) %>
+            <%= ChinaCity.get(@user.province) %>
+            <%= ChinaCity.get(@user.city) %>
+            <%= ChinaCity.get(@user.district) %>
             </li>
             <li>电话：<%= @order.billing_phone %></li>
-            <li>详细地址：<%= @order.billing_address %></li>
+            <li>详细地址：<%= @user.address %></li>
           </td>
           <td>
             <li>姓名：<%= @order.shipping_name %></li>

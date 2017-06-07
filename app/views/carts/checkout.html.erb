@@ -67,16 +67,7 @@
           <div class="form-group">
             <%= f.input :billing_phone ,label: "订购人电话" %>
           </div>
-          <div class="form-group ">
-            <%= f.input :billing_address ,label: "订购人详细地址" %>
-          </div>
-          <!-- <div class="city-group">
-            <%= f.select :billing_province,  ChinaCity.list.unshift(["--省份--", 230000]), {}, class: "city-select "%>
-            <%= f.select :billing_city,      ChinaCity.list(f.object.province).presence || [["--城市--", 230900]],    {}, class: "city-select " %>
-            <%= f.select :billing_district,  ChinaCity.list(f.object.city).presence     || [["--地区--", 230903]],    {}, class: "city-select " %>
-          </div> -->
 
-          </div>
 
 
           <hr>

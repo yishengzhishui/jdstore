@@ -278,28 +278,36 @@ html { height: 100%;}
 
 .main{
  	margin-top: -20px;
-  height: 700px;
+  height: 100%;
   background-size: cover;                             //确保图片完全撑开
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .signback {
+  padding-bottom: 150px;
   background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbqiyiim5j31kw0yeahl.jpg);
 }
 
 .loginback {
+  padding-bottom: 200px;
   background-image: url(https://ws1.sinaimg.cn/large/006tNc79gy1fgbqje917oj31kw11xjxf.jpg);
 }
-
+//----购物车页面背景------
 .cartindex {
   background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbqj9x6zbj31kw11xtie.jpg);
   padding-top: 50px;
+  height: 900px;
 }
-
+//------用户个人信息中心背景-------
 .userback {
   background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fgbx7kbwqij30zk0npjsp.jpg);
-  height: 100%;
+}
+.userback label {
+  color: #050f2c;
+}
+.useraddress {
+    margin-top: 20px;
 }
 
 h1.title {
@@ -351,4 +359,8 @@ label{
 	font-size: 14px;
 	text-align: center;
   margin-top: 15px;
+}
+
+.street {
+  width: 100%;
 }

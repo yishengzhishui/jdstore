@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170602022926) do
+ActiveRecord::Schema.define(version: 20170607071513) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -50,9 +50,6 @@ ActiveRecord::Schema.define(version: 20170602022926) do
     t.string   "province"
     t.string   "city"
     t.string   "district"
-    t.string   "billing_province"
-    t.string   "billing_city"
-    t.string   "billing_district"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
   end
 
@@ -118,6 +115,10 @@ ActiveRecord::Schema.define(version: 20170602022926) do
     t.boolean  "is_admin",               default: false
     t.string   "avatar"
     t.string   "username"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.string   "address"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
