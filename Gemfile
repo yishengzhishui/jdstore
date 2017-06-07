@@ -49,6 +49,7 @@ gem 'qiniu-rs'
 gem 'figaro'
 gem 'china_city'
 gem 'rqrcode'
+gem 'airbrake', '~> 5.4'
 group :development, :test do
   gem 'awesome_rails_console'
   gem 'pry'
