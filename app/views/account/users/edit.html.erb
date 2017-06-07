@@ -73,6 +73,36 @@
           </div>
         </div>
         <!-- <%= f.input :password_confirmation, :label => "确认新密码",required: false %> -->
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">详细地址</label>
+          <div class="cols-sm-10">
+            <div class="city-group ">
+              <!-- <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> -->
+              <%= f.select :province,  ChinaCity.list.unshift(["--省份--", 230000]), {}, class: "city-select "%>
+              <%= f.select :city,      ChinaCity.list(f.object.province).presence || [["--城市--", 230900]],    {}, class: "city-select " %>
+              <%= f.select :district,  ChinaCity.list(f.object.city).presence     || [["--地区--", 230903]],    {}, class: "city-select " %>
+            </div>
+            <div class="form-control useraddress">
+              <% if @user.province.blank? && @user.city.blank? && @user.district.blank? %>
+              <% else %>
+                <%= ChinaCity.get(@user.province) %>
+                <%= ChinaCity.get(@user.city) %>
+                <%= ChinaCity.get(@user.district) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">具体街道</label>
+          <div class="cols-sm-10">
+            <div class="input-group street">
+              <%= f.text_field :address , class: "form-control", required: true , autofocus: true %>
+            </div>
+          </div>
+        </div>
+
       </div>
       <hr>
 
