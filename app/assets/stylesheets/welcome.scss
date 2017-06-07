@@ -48,15 +48,16 @@
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {                                            //h1标题设置
-    font-size: 70px;
-    font-weight: 500;
+    font-size: 80px;
+    font-weight: 600;
     margin: 10px;
     padding: 0;
 }
 
 .hero h3 {                                            //h3标题设置
     letter-spacing: 0.1em;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .fade-carousel .carousel-inner .item .hero {          //动态出现设置
@@ -191,4 +192,24 @@ opacity: 1;
 
 .star-primary {
   margin-bottom: 50px;
+}
+
+//----铁粉说------
+
+.wow {
+  font-family: 'Passion One', cursive;
+}
+.wow1 {
+  font-family: 'Passion One', cursive;
+  font-size: 40px;
+  font-weight: 500;
+}
+.wow b {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.wow h2 {
+  font-size: 40px;
+  font-weight: 500;
 }
