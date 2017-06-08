@@ -12,10 +12,10 @@
 /*  --- 大图高度 和 滚动按钮 ---  */
 .fade-carousel {                                      //滚动大图的相框高
     position: relative;
-    height: 900px;
+    height: 1100px;
 }
 .fade-carousel .carousel-inner .item {                //图片截取的宽度，这里与相框高度一致
-    height: 900px;
+    height: 1100px;
 }
 .fade-carousel .carousel-indicators > li {            //滚动按钮的设置
     width: 5px;
@@ -38,7 +38,7 @@
     z-index: 3;                                       //元素堆叠等级3，将显示在最上层
     color: #fff;
     text-align: center;
-    font-family: 'Passion One', cursive;
+    font-family: "Noto Sans SC", sans-serif;
     text-transform: uppercase;                        //英文大写
     text-shadow: 0 0 5px #666;            //文字阴影 和 动态显示时间
       -webkit-transform: translate3d(-50%,-50%,0);
@@ -48,7 +48,7 @@
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {                                            //h1标题设置
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 600;
     margin: 10px;
     padding: 0;
@@ -56,7 +56,7 @@
 
 .hero h3 {                                            //h3标题设置
     letter-spacing: 0.1em;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -103,20 +103,30 @@
 .fade-carousel .slides .slide-1,
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 900px;
+  height: 1100px;
   background-size: cover;                             //确保图片完全撑开
   background-position: center;
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://static.pexels.com/photos/112324/pexels-photo-112324.jpeg);
+  background-image: url(https://ooo.0o0.ooo/2017/06/08/5938b6665821c.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://static.pexels.com/photos/48706/pexels-photo-48706.jpeg);
+  background-image: url(https://ooo.0o0.ooo/2017/06/08/5938f4c90b1a5.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://ooo.0o0.ooo/2017/05/29/592c15c74543a.jpg);
+  background-image: url(https://ooo.0o0.ooo/2017/06/08/5938f54043d04.jpg);
 }
+//第一版首页大图
+// .fade-carousel .slides .slide-1 {
+//   background-image: url(https://static.pexels.com/photos/112324/pexels-photo-112324.jpeg);
+// }
+// .fade-carousel .slides .slide-2 {
+//   background-image: url(https://static.pexels.com/photos/48706/pexels-photo-48706.jpeg);
+// }
+// .fade-carousel .slides .slide-3 {
+//   background-image: url(https://ooo.0o0.ooo/2017/05/29/592c15c74543a.jpg);
+// }
 
 /*  --- 响应式设置 ---  */
 @media screen and (min-width: 980px){
@@ -130,7 +140,7 @@
 }
 
 
-//----推荐商品区域------
+//----热卖商品区域------
 
 //-----图片向上滑动------
 
@@ -160,7 +170,7 @@
 
 
 #hot-products{
-  background-color: #ECEFF1;
+  background-color: rgb(245,245,245);
   // margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -197,12 +207,17 @@ opacity: 1;
 //----铁粉说------
 
 .wow {
-  font-family: 'Passion One', cursive;
+  font-family: "Noto Sans SC", sans-serif;
 }
 .wow1 {
-  font-family: 'Passion One', cursive;
-  font-size: 40px;
-  font-weight: 500;
+  text-align: center;
+  color: #554236;
+  // color: rgb(127,140,141);
+  letter-spacing: 0.1em;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 2em;
+  margin-top: 3.2em;
+  // font-weight: 500;
 }
 .wow b {
   font-size: 14px;
@@ -210,6 +225,11 @@ opacity: 1;
 }
 
 .wow h2 {
-  font-size: 40px;
-  font-weight: 500;
+  text-align: center;
+  color: #554236;
+  // color: rgb(127,140,141);
+  letter-spacing: 0.1em;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 2em;
+  margin-top: 3.2em;
 }
