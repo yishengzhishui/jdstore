@@ -30,7 +30,7 @@
 }
 
 .navbar-default {
-    background-color: #ECEFF1;
+    background-color: rgb(245,245,245);
     border-color: #FAFAFA;
     border-radius: 0;
 }
@@ -115,7 +115,7 @@ body {
      color: #666;                             // 修改全站的字体主色 压低亮度
      }
 
-//----------- 热门商品 -------------//
+//----------- 欧洲花艺展示 -------------//
 section {
     padding: 100px 0;
     // background: #E0E0E0;//背景颜色
@@ -188,7 +188,7 @@ footer {
 
 footer .footer-below {
     padding: 15px 0;
-    background-color: #d7d7d8;
+    background-color: rgb(245,245,245);
 }
 
 //--------footer-bottom------
@@ -263,7 +263,7 @@ html { height: 100%;}
   right: 20px;
   bottom: 20px;
   border-radius: 50%;
-  background: #F25F5C;
+  background: rgba(0,0,0,0.2);
   cursor: pointer;
   display: none; /*默认先隐藏掉*/
 }
