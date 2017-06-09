@@ -16,10 +16,10 @@
 //= require bootstrap
 //= require_tree .
 //------首页轮播--------
-$(document).ready(function() {
-    $('#myCarousel').carousel({interval: 4000})
-    $(window).trigger('scroll') // 一开始就触发一下滚动事件
-});
+// $(document).ready(function() {
+//     $('#myCarousel').carousel({interval: 4000})
+//     $(window).trigger('scroll') // 一开始就触发一下滚动事件
+// });
 
 //-------回到顶部--------
 $(document).on('click', '#gotop', function () {
