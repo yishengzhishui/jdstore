@@ -124,13 +124,13 @@
 </div>
 
 <div class="row" id="hot-products" style="margin-bottom:60px;">
-  <div class="col-sm-10 col-sm-offset-1" style="margin-left:3%; margin-right:3%; width:94%;">
+  <div class="col-sm-10 col-sm-offset-1" >
     <!-- carousel begain -->
     <div id="myCarousel" class="carousel slide">
 
      <div class="carousel-inner">
         <div class=" item active">
-         <div class="col-sm-10 col-sm-offset-1" style="margin-left:1%; margin-right:1%; width:98%;" >
+         <div class="col-sm-10 col-sm-offset-1" >
            <div style=" margin-top:30px;">
              <!--按照点赞数量来排列-->
              <% Product.limit(3).sort_by{|product| product.get_upvotes.size }.reverse.each do |product| %>
