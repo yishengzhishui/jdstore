@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default" role="navigation" style="padding-left:40px; padding-right:40px">
       <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >幸福小站</a>
                 <ul class="nav navbar-nav">
@@ -32,7 +32,7 @@
             </div>
           </div>
   <!-- 搜索栏 -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="nav navbar-nav">
           <%= form_tag search_products_path , :method => :get do %>
           <div class="input-group" id="search-id" >
@@ -48,7 +48,7 @@
       </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right log-word">
