@@ -45,8 +45,6 @@ class ProductsController < ApplicationController
     end
     current_cart.add(@product, @quantity)
     flash[:warning] = "商品已加入购物车"
-
-    redirect_to :back
   end
 
 #--------直接购买--------------
@@ -72,8 +70,6 @@ class ProductsController < ApplicationController
        current_user.join!(@product)
        @product.upvote_by current_user
      end
-
-     redirect_to :back
    end
 
    def quit
@@ -82,8 +78,7 @@ class ProductsController < ApplicationController
      if current_user.is_member_of?(@product)
        current_user.quit!(@product)
      end
-
-     redirect_to :back
+     render "join"
    end
 #------搜索栏------------
   def search

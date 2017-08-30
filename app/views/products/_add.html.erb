@@ -1,0 +1,7 @@
+<button class="btn btn-default" title="Add to cart">
+  <% if product.quantity.present? && product.quantity > 0 %>
+    <%= link_to("", add_to_cart_product_path(product), method: :post, :remote => true , class: "fa fa-shopping-cart") %>
+  <% else %>
+  售罄
+  <% end %>
+</button>

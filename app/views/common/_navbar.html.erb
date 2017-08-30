@@ -54,7 +54,7 @@
                 <ul class="nav navbar-nav navbar-right log-word">
                   <li>
                     <%= link_to carts_path do %>
-                      购物车 <i class="fa fa-shopping-cart"></i> ( <%= current_cart.products.count %>)
+                      购物车 <i class="fa fa-shopping-cart"></i><span id="cart-d"> ( <%= current_cart.products.count %>)</span>
                     <% end %>
                   </li>
                  <% if !current_user %>
